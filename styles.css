@@ -175,14 +175,12 @@ img {
 }
 
 .featured-item {
-    flex: 0 0 calc(33.333% - 1.33rem);
+    flex: 0 0 calc(33.333% - 1.33rem); /* Show 3 items at once */
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    height: auto; /* Allow height to adjust to content */
-    min-height: 400px; /* Adjust this value as needed */
 }
 
 .featured-item:hover {
@@ -197,23 +195,11 @@ img {
 
 .featured-text {
     padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    height: auto; /* Allow text container to expand */
 }
 
 .featured-text h3 {
     margin-bottom: 0.5rem;
     color: var(--primary);
-    word-wrap: break-word; /* Ensure long words break properly */
-    hyphens: auto;
-}
-
-@media (max-width: 768px) {
-    .featured-item {
-        flex: 0 0 100%;
-        min-height: auto; /* Let it adjust to content on mobile */
-    }
 }
 
 .price {
