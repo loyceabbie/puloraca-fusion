@@ -68,6 +68,26 @@ img {
     color: var(--accent);
 }
 
+.mobile-menu-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.mobile-menu-button span {
+    width: 100%;
+    height: 3px;
+    background: var(--background);
+    transition: all 0.3s ease;
+}
+
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -248,8 +268,26 @@ img {
 }
 
 @media (max-width: 768px) {
-    .featured-item {
-        flex: 0 0 100%; /* Show 1 item on mobile */
+    .nav-links {
+        display: flex;
+        position: fixed;
+        top: 70px; /* Adjust based on your navbar height */
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .mobile-menu-button {
+        display: flex;
     }
 }
 
